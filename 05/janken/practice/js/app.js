@@ -53,11 +53,28 @@ function janken () {
   /* 実行する処理 ************************/
   let hum = getHumHand();
   if (!hum) {
-    alert('入力値をうまく認識できませんでした。ブラウザを再読込すると、もう一度挑戦できます。');
+    alert('入力値をうまく認識できませんでした。もう一度入力してください。');
   } else {
     let com = getComHand();
     alert(getResultMsg(com, hum));
+    return getResult(com, hum);
   }
 }
 
-janken();
+let win = 0;
+let isLose = false;
+while (!isLose) {
+  let result = janken();
+  if (result === `結果はあいこでした。`) {
+    continue;
+  } else if (result === `勝ちました。`) {
+    win++;
+    alert(`ただいま「${win}」勝です。`);
+    continue;
+  } else if (result === `負けました。`) {
+    alert(`連勝はストップです。記録は「${win}」勝でした。`);
+    isLose = true;
+  } else {
+    continue;
+  }
+}
