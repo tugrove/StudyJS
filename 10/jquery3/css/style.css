@@ -1,0 +1,11 @@
+p {
+    margin: 10px;
+}
+
+#textarea {
+    margin: 10px;
+}
+#button {
+    display: block;
+    margin: 10px;
+}
