@@ -1,0 +1,35 @@
+body {
+    background: rgb(68, 68, 68);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#gallery {
+    margin: auto;
+    padding: 40px 0 0;
+    width: 500px;
+}
+
+#gallery .main img {
+    border: 4px solid rgb(255, 255, 255);
+    box-shadow: 0 0 14px rgb(0, 0, 0);
+    width: 100%;
+}
+
+#gallery .main p {
+    color: rgb(187, 187, 187);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#gallery .thumb img {
+    border: 4px solid rgb(255, 255, 255);
+    border-radius: 400px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    height: 60px;
+    margin: 10px;
+    width: 60px;
+}
+#gallery .thumb img:hover {
+    cursor: pointer;
+}
